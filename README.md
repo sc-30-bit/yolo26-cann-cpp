@@ -1,6 +1,6 @@
 # CANN-YOLO26-Atlas
 
-<p align="center">
+<p align="left">
   <img alt="platform" src="https://img.shields.io/badge/Platform-Huawei%20Atlas-blue">
   <img alt="toolkit" src="https://img.shields.io/badge/Toolkit-CANN-orange">
   <img alt="language" src="https://img.shields.io/badge/C%2B%2B-17-brightgreen">
@@ -10,16 +10,7 @@
 
 ## Overview
 
-This repository contains a practical C++ deployment project for **YOLO26** on **Huawei Atlas** devices using **CANN / AscendCL**.
-
-The project currently supports:
-
-* **FP16 inference**
-* **AIPP-based preprocessing**
-* **pure detection**
-* **detection + tracking**
-* **video-file inference**
-* **USB camera inference**
+This repository contains a practical C++ deployment project for **YOLO26** on **Huawei Atlas** devices using **CANN / AscendCL**. It currently supports **FP16 inference**, **AIPP-based preprocessing**, **pure detection**, **detection + tracking**, **video-file inference**, and **USB camera inference**.
 
 ## Repository Structure
 
@@ -37,26 +28,11 @@ cann-yolo26-atlas/
 
 ## Requirements
 
-This project is intended to run on a **Huawei Atlas** device with a local **CANN Toolkit** installation. Huawei Ascend documentation portal is the official entry point for CANN and Atlas-related manuals and setup references.
-
-Typical environment:
-
-* Huawei Atlas device
-* CANN Toolkit
-* OpenCV
-* CMake
-* GCC / G++
-* Ubuntu-based runtime environment on device
+This project requires a Huawei Atlas device with CANN Toolkit installed, plus OpenCV, CMake, and GCC/G++.
 
 ## Model Weights
 
 Download the CANN `.om` model from [Google Drive](https://drive.google.com/file/d/1saF-3-yTGZoNJAgP1Gg8CqcY1rL6p_rT/view?usp=sharing).
-
-Both demos currently expect the model at:
-
-```text
-/home/HwHiAiUser/YOLO26/yolo26nfp16_aipp_opt3.om
-```
 
 After downloading, copy the model to that path on the Atlas device, or update `kModelPath` in:
 
@@ -150,25 +126,3 @@ A typical path looks like:
 ```
 
 The repository does **not** include system runtime libraries such as OpenCV shared libraries or `libascendcl.so`. These should come from the target device environment.
-
-## Current Status
-
-Implemented:
-
-* [x] CANN / AscendCL inference
-* [x] FP16 deployment
-* [x] AIPP preprocessing
-* [x] pure detection demo
-* [x] tracking demo
-* [x] video-file inference
-* [x] USB camera inference
-
-In progress / planned:
-
-* [ ] cleaner project modularization
-* [ ] INT8 deployment optimization
-* [ ] DVPP / VPC preprocessing
-* [ ] add model conversion scripts
-* [ ] add AIPP config examples
-* [ ] add calibration dataset notes
-* [ ] add deployment screenshots / GIFs
