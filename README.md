@@ -1,6 +1,4 @@
-# yolo26-cann-cpp
-
-[中文说明](./README_CN.md)
+# yolo26-cann-cpp <sub>[中文说明](./README_CN.md)</sub>
 
 <p align="left">
   <img alt="platform" src="https://img.shields.io/badge/Platform-Huawei%20Atlas-blue">
