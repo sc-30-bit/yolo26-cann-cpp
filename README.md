@@ -1,8 +1,6 @@
-<p align="right">
-  <a href="./README_CN.md">中文说明</a>
-</p>
-
 # yolo26-cann-cpp
+
+<sub>Language: English | [中文说明](./README_CN.md)</sub>
 
 <p align="left">
   <img alt="platform" src="https://img.shields.io/badge/Platform-Huawei%20Atlas-blue">
