@@ -1,5 +1,7 @@
 # yolo26-cann-cpp
 
+[中文说明](./README_CN.md)
+
 <p align="left">
   <img alt="platform" src="https://img.shields.io/badge/Platform-Huawei%20Atlas-blue">
   <img alt="toolkit" src="https://img.shields.io/badge/Toolkit-CANN-orange">
@@ -31,7 +33,8 @@ yolo26-cann-cpp/
 |   |-- detection.jpg
 |   `-- tracking.jpg
 |-- .gitignore
-`-- README.md
+|-- README.md
+`-- README_CN.md
 ```
 
 ## Requirements
@@ -42,10 +45,13 @@ This project requires a Huawei Atlas device with CANN Toolkit installed, plus Op
 
 Download the CANN `.om` model from [Google Drive](https://drive.google.com/file/d/1saF-3-yTGZoNJAgP1Gg8CqcY1rL6p_rT/view?usp=sharing).
 
-After downloading, copy the model to that path on the Atlas device, or update `kModelPath` in:
+Both demos currently expect the model at:
 
-* `CANN-CPP-DETECTION/main.cpp`
-* `CANN-CPP-TRACK/main.cpp`
+```text
+/home/HwHiAiUser/YOLO26/yolo26nfp16_aipp_opt3.om
+```
+
+After downloading, copy the model to that path on the Atlas device, or update `kModelPath` in `CANN-CPP-DETECTION/main.cpp` and `CANN-CPP-TRACK/main.cpp`.
 
 ## Build
 
@@ -93,9 +99,7 @@ In `main.cpp`, set:
 const std::string kVideoSource = "0";
 ```
 
-This uses the default webcam device, typically `/dev/video0`.
-
-If needed, camera resolution can be set after `cap.open()` in OpenCV.
+This uses the default webcam device, typically `/dev/video0`. If needed, camera resolution can be set after `cap.open()` in OpenCV.
 
 ## AIPP Notes
 
@@ -122,7 +126,4 @@ This corresponds to mapping input RGB values from `[0, 255]` into `[0, 1]`.
 
 ## CMake Notes
 
-The project expects:
-
-* OpenCV from the local system installation
-* Ascend headers and libraries from local CANN installation
+The project uses OpenCV from the local system installation and looks for Ascend headers and `libascendcl.so` from the local CANN Toolkit installation.
