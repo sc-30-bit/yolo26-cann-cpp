@@ -9,7 +9,7 @@
 
 ## Overview
 
-This repository contains a practical C++ deployment project for **YOLO26** on **Huawei Atlas** devices using **CANN / AscendCL**. It currently supports **FP16 inference**, **AIPP-based preprocessing**, **pure detection**, **detection + tracking**, **video-file inference**, and **USB camera inference**.
+This repository contains a practical C++ deployment project for **YOLO26** on **Huawei Atlas** devices using **CANN / AscendCL**, with a downloadable [CANN `.om` weight file](https://drive.google.com/file/d/1saF-3-yTGZoNJAgP1Gg8CqcY1rL6p_rT/view?usp=sharing) provided for quick setup. It currently supports **FP16 inference**, **AIPP-based preprocessing**, **pure detection**, **detection + tracking**, **video-file inference**, and **USB camera inference**.
 
 ## Example Results
 
