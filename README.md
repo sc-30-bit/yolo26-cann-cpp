@@ -14,30 +14,30 @@ This repository contains a practical C++ deployment project for **YOLO26** on **
 
 The project currently supports:
 
-- **FP16 inference**
-- **AIPP-based preprocessing**
-- **pure detection**
-- **detection + tracking**
-- **video-file inference**
-- **USB camera inference**
+* **FP16 inference**
+* **AIPP-based preprocessing**
+* **pure detection**
+* **detection + tracking**
+* **video-file inference**
+* **USB camera inference**
 
 ## Repository Structure
 
 ```text
 cann-yolo26-atlas/
-├── CANN-CPP-DETECTION/
-│   ├── CMakeLists.txt
-│   └── main.cpp
-├── CANN-CPP-TRACK/
-│   ├── CMakeLists.txt
-│   └── main.cpp
-├── .gitignore
-└── README.md
+|-- CANN-CPP-DETECTION/
+|   |-- CMakeLists.txt
+|   `-- main.cpp
+|-- CANN-CPP-TRACK/
+|   |-- CMakeLists.txt
+|   `-- main.cpp
+|-- .gitignore
+`-- README.md
 ```
 
 ## Requirements
 
-This project is intended to run on a **Huawei Atlas** device with a local **CANN Toolkit** installation. Huawei’s Ascend documentation portal is the official entry point for CANN and Atlas-related manuals and setup references. 
+This project is intended to run on a **Huawei Atlas** device with a local **CANN Toolkit** installation. Huawei Ascend documentation portal is the official entry point for CANN and Atlas-related manuals and setup references.
 
 Typical environment:
 
@@ -47,6 +47,21 @@ Typical environment:
 * CMake
 * GCC / G++
 * Ubuntu-based runtime environment on device
+
+## Model Weights
+
+Download the CANN `.om` model from [Google Drive](https://drive.google.com/file/d/1saF-3-yTGZoNJAgP1Gg8CqcY1rL6p_rT/view?usp=sharing).
+
+Both demos currently expect the model at:
+
+```text
+/home/HwHiAiUser/YOLO26/yolo26nfp16_aipp_opt3.om
+```
+
+After downloading, copy the model to that path on the Atlas device, or update `kModelPath` in:
+
+* `CANN-CPP-DETECTION/main.cpp`
+* `CANN-CPP-TRACK/main.cpp`
 
 ## Build
 
@@ -157,6 +172,3 @@ In progress / planned:
 * [ ] add AIPP config examples
 * [ ] add calibration dataset notes
 * [ ] add deployment screenshots / GIFs
-
-
-
