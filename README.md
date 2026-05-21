@@ -118,11 +118,3 @@ The project expects:
 
 * OpenCV from the local system installation
 * Ascend headers and libraries from local CANN installation
-
-A typical path looks like:
-
-```text
-/usr/local/Ascend/ascend-toolkit/latest
-```
-
-The repository does **not** include system runtime libraries such as OpenCV shared libraries or `libascendcl.so`. These should come from the target device environment.
