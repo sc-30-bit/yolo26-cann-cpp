@@ -1,27 +1,35 @@
-# CANN-YOLO26-Atlas
+# yolo26-cann-cpp
 
 <p align="left">
   <img alt="platform" src="https://img.shields.io/badge/Platform-Huawei%20Atlas-blue">
   <img alt="toolkit" src="https://img.shields.io/badge/Toolkit-CANN-orange">
   <img alt="language" src="https://img.shields.io/badge/C%2B%2B-17-brightgreen">
   <img alt="opencv" src="https://img.shields.io/badge/OpenCV-required-yellowgreen">
-  <img alt="status" src="https://img.shields.io/badge/Status-Work%20in%20Progress-lightgrey">
 </p>
 
 ## Overview
 
 This repository contains a practical C++ deployment project for **YOLO26** on **Huawei Atlas** devices using **CANN / AscendCL**. It currently supports **FP16 inference**, **AIPP-based preprocessing**, **pure detection**, **detection + tracking**, **video-file inference**, and **USB camera inference**.
 
+## Example Results
+
+| Detection | Tracking |
+| --- | --- |
+| <img src="./figs/detection.jpg" alt="YOLO26 detection example" width="420"> | <img src="./figs/tracking.jpg" alt="YOLO26 tracking example" width="420"> |
+
 ## Repository Structure
 
 ```text
-cann-yolo26-atlas/
+yolo26-cann-cpp/
 |-- CANN-CPP-DETECTION/
 |   |-- CMakeLists.txt
 |   `-- main.cpp
 |-- CANN-CPP-TRACK/
 |   |-- CMakeLists.txt
 |   `-- main.cpp
+|-- figs/
+|   |-- detection.jpg
+|   `-- tracking.jpg
 |-- .gitignore
 `-- README.md
 ```
